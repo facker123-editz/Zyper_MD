@@ -1,278 +1,165 @@
 <div align="center">
-  
-<img src="https://capsule-render.vercel.app/api?type=waving&height=230&color=0:6a0dad,100:ab47bc&text=KHAN%20MD&fontColor=ffffff&fontSize=85&fontAlignY=40&animation=twinkling&desc=Powered%20By%20Jawad%20TechX&descSize=20&descAlignY=65&stroke=ffffff&strokeWidth=1.2" width="100%"/>
 
-<div style="
-  margin-top: -60px;
-  text-align: center;
-  font-size: 32px;
-  font-weight: 1000;  /* Nuclear bold - no skimping */
-  letter-spacing: 3px;  /* Extra spacing for bold punch */
-  background: linear-gradient(90deg, #6a0dad, #ab47bc, #d896ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-shadow:
-    0 0 12px #6a0dad,
-    0 0 24px #ab47bc,
-    0 0 36px #d896ff,
-    0 0 48px #ab47bc;
-  padding: 12px 0;
-"> Built on Baileys • Designed for Speed • Enhanced for Stability • Powered by Jawad TechX
-</div>
-</p>
+<!-- ═══════════════════ CYBERPUNK / HACKER BANNER ═══════════════════ -->
+<img src="https://capsule-render.vercel.app/api?type=cylinder&color=0:000000,40:02140d,80:002b1a,100:00ff66&height=220&section=header&text=⚡%20ZYPHER%20MD%20⚡&fontSize=65&fontColor=00ff66&stroke=000000&strokeWidth=2&fontAlignY=45&animation=twinkling&desc=SYSTEM%20SECURITY%20BYPASSED%20•%20NEURAL%20AI%20CORE%20ONLINE&descSize=16&descAlignY=70&descColor=a3e635" width="100%"/>
 
-<h1 align="center">
-  <img src="https://img.shields.io/badge/-✨_KHAN--MD_INSIGHTS_✨-purple?style=for-the-badge&logo=sparkles&logoColor=white&labelColor=0d1117&color=9d4edd&label=&link=https://github.com/KHAN-MD&link=https://github.com/KHAN-MD" />
-</h1>
-</p>
-</p>
-    <img src="https://komarev.com/ghpvc/?username=JawadTechYT&label=Views&color=9D00FF&style=flat" alt="Profile Views" />
-    <img src="https://img.shields.io/github/stars/JawadTechYT/KHAN-MD?color=9D00FF&label=Stars&style=flat" alt="GitHub Stars" />
-    <img src="https://img.shields.io/github/forks/JawadTechYT/KHAN-MD?style=flat&color=1E88E5&logo=github&logoColor=white&label=Forks" alt="GitHub Forks" />
-    <img src="https://img.shields.io/github/followers/JawadTechYT?style=flat&color=43A047&logo=github&logoColor=white&label=Followers" alt="GitHub Followers" />
-    <img src="https://img.shields.io/github/last-commit/JawadTechYT/KHAN-MD?style=flat&color=8E24AA&logo=git&logoColor=white&label=Last%20Commit" alt="Last Commit" />
-    <img src="https://img.shields.io/github/repo-size/JawadTechYT/KHAN-MD?style=flat&color=0097A7&logo=database&logoColor=white&label=Repo%20Size" alt="Repo Size" />
-    <img src="https://img.shields.io/github/package-json/v/JawadTechYT/KHAN-MD?style=flat&color=F57C00&logo=npm&logoColor=white&label=Version" alt="Package Version" />
-  </p>
-  
-</div>
+<br/>
 
----
-
-> **Deploy New Version `15.0.5`**  
-
----
-
-<div align="center">
-  <img src="https://raw.githubusercontent.com/JawadTechXD/JawadTechXD/refs/heads/main/khanmd.jpg" width="300" style="border-radius: 20px; box-shadow: 0 0 20px #00ffff;"/>
-</div>
-
-***
-
-<div align="center"> 
-  <img src="https://img.shields.io/badge/WhatsApp-MultiDevice-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="Multi-Device"/>    
-  <img src="https://img.shields.io/badge/Powered%20By-Node.js-339933?style=for-the-badge&logo=nodedotjs" alt="Node.js"/>    
-  <img src="https://img.shields.io/badge/Baileys-Latest-blueviolet?style=for-the-badge" alt="Baileys"/>  
-</div>
-
----
-
-<h2 align="center">🛰️ Deployment Steps</h2>
-</p>
-
-<div style="background: #000000; border: 1px solid #00ffff; border-radius: 15px; padding: 20px; box-shadow: 0 0 15px #00ffff; margin-bottom: 30px;">
-
-  <div style="background: #111111; padding: 15px; border-radius: 10px; border-left: 4px solid #ff00ff;">
-    <p style="color: #00ffff; font-size: 16px;">🚀 First, star & fork the repo using the button below:</p>
-    <a href='https://github.com/JawadTechYT/KHAN-MD/fork' target="_blank">
-      <img src='https://img.shields.io/badge/FORK_REPOSITORY-008000?style=for-the-badge&logo=github&logoColor=white&labelColor=000000'/>
-    </a>
-  </div>
-
-</div>
-
-<div style="background: #000000; border: 1px solid #ff00ff; border-radius: 15px; padding: 20px; box-shadow: 0 0 15px #ff00ff; margin-bottom: 30px;">
-
-  <div style="background: #111111; padding: 15px; border-radius: 10px; border-left: 4px solid #00ffff;">
-    <p style="color: #ff00ff; font-size: 16px;">📦 Next deploy using your preferred method ( Heroku, Railway, etc.)</p>
-    <ul style="color: #ffffff; line-height: 1.6;">
-      <li>📁 Clone or Fork the repository</li>
-      <li>⚙️ Add your <code>setting</code> variables</li>
-      <li>🚀 Deploy using platform buttons or manual setup</li>
-    </ul>
-  </div>
-
-</div>
-  
----
-
-## 🚀 Pairing Dashboard
-
-> Securely link your device using the official KHAN-MD pairing portals below: if connection issues may require vpn activation to fix this issue.
-
- <div align="center">
-
-### 🌊 GET SESSION ID
+<!-- ═══════════════════ HACKER LOGO WITH NEON GLOW ═══════════════════ -->
 <p align="center">
-  <a href="https://khanmd-pairx.onrender.com">
-    <img src="https://img.shields.io/badge/💫_PAIR_CODE_GENRATER-4F46E5?style=for-the-badge&logo=codeberg&logoColor=white&labelColor=1e1b4b" alt="Long Session"/>
+  <a href="https://github.com">
+    <img src="https://files.catbox.moe/qvtnzu.png" 
+         alt="Zypher MD Cyber Logo" 
+         width="230" 
+         height="230" 
+         style="border-radius: 50%; border: 3px solid #00ff66; box-shadow: 0 0 25px #00ff66, 0 0 50px rgba(0, 242, 254, 0.4), inset 0 0 15px #00ff66; object-fit: cover; transition: transform 0.3s ease-in-out;"/>
   </a>
 </p>
 
+<!-- ═══════════════════ MATRIX LIVE TYPING TERMINAL ═══════════════════ -->
+<p align="center">
+  <a href="https://github.com">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=20&duration=2500&pause=800&color=00FF66&background=0A0E1700&center=true&vCenter=true&multiline=true&width=750&height=100&lines=root%40zypher%3A~%23+.%2Finitialize_neural_core.sh;%5B%2B%5D+SYSTEM+BREACH+CONFIRMED...+AUTHENTICATING+OPERATIVE...;%5B%2B%5D+NEURAL+LINK+CONNECTED%3A+GOOGLE+GEMINI+AI+v3.0;%5B%2B%5D+WEBRTC+REAL-TIME+VOICE+INTERCEPT+BRIDGE+ONLINE;%5B%2B%5D+DOCKER+DAEMON+RUNNING+24%2F7+IN+STEALTH+MODE;%5B%E2%9A%A0%5D+OPERATIVE%3A+Shenura+Nimnada+%7C+STATUS%3A+ROOT_ACCESS" alt="Terminal Typing SVG" />
+  </a>
+</p>
+
+<!-- ═══════════════════ ANIMATED CYBER DIVIDER ═══════════════════ -->
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4300-a447-11eb-908a-139a6edaec5c.gif" width="100%"/>
+
+<!-- ═══════════════════ CYBER STATUS BADGES ═══════════════════ -->
+<p align="center">
+  <img src="https://img.shields.io/badge/SYS_STATUS-ONLINE_%5B24%2F7%5D-000000?style=for-the-badge&logo=statuspal&logoColor=00ff66&labelColor=051b11&color=00ff66" alt="Status"/>
+  <img src="https://img.shields.io/badge/ENCRYPTION-SHA--256_MILSPEC-000000?style=for-the-badge&logo=gnupg&logoColor=00f2fe&labelColor=021927&color=00f2fe" alt="Encryption"/>
+  <img src="https://img.shields.io/badge/DOCKER-CONTAINERIZED-000000?style=for-the-badge&logo=docker&logoColor=2496ED&labelColor=081e2b&color=2496ED" alt="Docker"/>
+  <img src="https://img.shields.io/badge/NEURAL_AI-GEMINI_3.0-000000?style=for-the-badge&logo=googlecloud&logoColor=ff0055&labelColor=2b0010&color=ff0055" alt="AI"/>
+  <img src="https://img.shields.io/badge/CLEARANCE-ROOT_LEVEL-000000?style=for-the-badge&logo=linux&logoColor=facc15&labelColor=231e03&color=facc15" alt="Clearance"/>
+</p>
+
 </div>
 
 ---
 
-## 📡 DEPLOYMENT SITES
+## 📟 `[// SYSTEM_CAPABILITIES_MANIFEST]`
 
-<p align="center">Deploy your <strong>KHAN-MD Bot</strong> with one click on your favorite hosting platforms.</p>
+<table align="center" width="100%">
+<tr>
+<td width="50%" valign="top">
+
+### 🛡️ Cyber Defense & Anti-Intrusion
+- **Anti-Delete Engine:** Intercepts & restores purged messages instantly.
+- **Anti-Link Defense:** Automated expulsion of rogue group link spammers.
+- **Anti-Badword Protocol:** Real-time linguistic filtering and warn flags.
+- **Auto-Call Blocker:** Intercepts unwanted voice/video calls with custom reject alerts.
+- **Auto-Status Interceptor:** Stealth mode viewing and media acquisition.
+
+</td>
+<td width="50%" valign="top">
+
+### 🤖 Neural AI & Voice Grid
+- **Gemini Multimodal AI:** Intelligent context memory, vision parsing & code synthesis.
+- **WebRTC Live Call Bridge:** Full-duplex two-way voice call bridge via browser dashboard.
+- **AI Visual Synthesizer:** On-demand AI sticker generation, logo craft & video synthesis.
+- **CineSubz Deep Scraper:** Automated high-speed Sinhala movie link extraction.
+- **Dockerized Daemon:** Self-healing PM2 cluster engineered for zero downtime.
+
+</td>
+</tr>
+</table>
+
+---
+
+## 🖥️ `[// TERMINAL_DEPLOYMENT_MATRIX]`
+
+```bash
+┌──(root㉿zypher)-[~/khan-md]
+└─$ git clone https://github.com/<YOUR_USERNAME>/<YOUR_REPO_NAME>.git
+└─$ cd <YOUR_REPO_NAME>
+└─$ docker build -t zypher-core:v1 .
+└─$ docker run -d --name zypher-node --restart=always -p 9090:9090 -p 3000:3000 zypher-core:v1
+[✓] SUCCESS: Zypher MD Daemon successfully initialized in Stealth Background Mode.
+```
+
+---
+
+## 🚀 `[// INSTANT_CLOUD_UPLINK]`
+
+Deploy the container directly to cloud clusters with zero local hardware load:
 
 <div align="center">
 
-### 🔥 TRY KHAN MD MINI
-<!-- Cyber Red -->
-<p align="center">
-  <a href="https://khan-mdx.vercel.app">
-    <img src="https://img.shields.io/badge/🚀_START_KHAN_MD-ff073a?style=for-the-badge&logo=vercel&logoColor=white&labelColor=0d0d0d" alt="KHAN MD Mini Cyber Red"/>
-  </a>
-</p>
+<a href="https://railway.app" target="_blank">
+  <img src="https://img.shields.io/badge/UPLINK_TO-RAILWAY_CLOUD-000000?style=for-the-badge&logo=railway&logoColor=00ff66&labelColor=051b11&color=00ff66" alt="Deploy Railway"/>
+</a>
+&nbsp;&nbsp;
+<a href="https://www.koyeb.com" target="_blank">
+  <img src="https://img.shields.io/badge/UPLINK_TO-KOYEB_SERVERLESS-000000?style=for-the-badge&logo=koyeb&logoColor=00f2fe&labelColor=021927&color=00f2fe" alt="Deploy Koyeb"/>
+</a>
+&nbsp;&nbsp;
+<a href="https://render.com" target="_blank">
+  <img src="https://img.shields.io/badge/UPLINK_TO-RENDER_DOCKER-000000?style=for-the-badge&logo=render&logoColor=a855f7&labelColor=1a0729&color=a855f7" alt="Deploy Render"/>
+</a>
+&nbsp;&nbsp;
+<a href="https://heroku.com" target="_blank">
+  <img src="https://img.shields.io/badge/UPLINK_TO-HEROKU_ECOSYSTEM-000000?style=for-the-badge&logo=heroku&logoColor=ff0055&labelColor=2b0010&color=ff0055" alt="Deploy Heroku"/>
+</a>
 
-<div align="center">
-  <table>
-    <tr>
-      <!-- Heroku (with rocket logo on left) -->
-      <td><a href="https://dashboard.heroku.com/new?template=https://github.com/JawadExtra/KHANXMD" target="_blank">
-  <img src="https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=rocket&logoColor=white"/>
-</a></td>
-      <!-- Replit -->
-      <td><a href="https://replit.com/github/JawadExtra/KHANXMD" target="_blank"><img src="https://img.shields.io/badge/Replit-F26207?style=for-the-badge&logo=replit&logoColor=white&labelColor=000000"/></a></td>
-    </tr>
-    <tr>
-      <!-- Koyeb -->
-      <td><a href="https://app.koyeb.com/deploy?type=git&repository=github.com/JawadExtra/KHANXMD" target="_blank"><img src="https://img.shields.io/badge/Koyeb-FF009D?style=for-the-badge&logo=koyeb&logoColor=white&labelColor=000000"/></a></td>
-      <!-- Railway -->
-      <td><a href="https://railway.app/new/template?template=https://github.com/JawadExtra/KHANXMD" target="_blank"><img src="https://img.shields.io/badge/Railway-FF8700?style=for-the-badge&logo=railway&logoColor=white&labelColor=000000"/></a></td>
-    </tr>
-    <tr>
-      <!-- Render (blue color theme) -->
-      <td><a href="https://render.com/deploy?repo=https://github.com/JawadExtra/KHANXMD" target="_blank"><img src="https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=white&labelColor=000000&color=007FFF"/></a></td>
-      <!-- Netlify -->
-      <td><a href="https://app.netlify.com/start/deploy?repository=https://github.com/JawadExtra/KHANXMD" target="_blank"><img src="https://img.shields.io/badge/Netlify-CC00FF?style=for-the-badge&logo=huggingface&logoColor=white&labelColor=000000"/></a></td>
-    </tr>
-  </table>
 </div>
 
-## 🚀 Deploy On Panel
+---
+
+## ⚙️ `[// CONFIGURATION_ENVIRONMENT_VARS]`
+
+```env
+# ══════════════ CORE SECRET KEYS ══════════════
+SESSION_ID           = "IK~eyJub2lzZ..."   # Raw Baileys Auth Session
+BOT_NAME             = "Zypher MD"        # Operative Name
+PREFIX               = "."                # Cyber Command Prefix
+MODE                 = "public"           # Access Mode: public | private
+
+# ══════════════ OPERATIVE CONTACTS ════════════
+OWNER_NUMBER         = "94788108090"     # Primary Controller Phone
+OWNER_NAME           = "Shenura Nimnada"  # Controller Identifier
+
+# ══════════════ NEURAL AI LINK ════════════════
+GEMINI_API_KEY       = "AQ.Ab8RN6..."     # Google AI Studio API Key
+CHATBOT              = "on"               # Multimodal Auto Neural Chat
+```
+
+---
+
+## 👤 `[// OPERATIVE_DOSSIER]`
+
+<div align="center">
 
 <table align="center">
+  <tr>
     <td align="center">
-      <a href="https://github.com/JawadExtra/KHANXMD/archive/refs/heads/main.zip" target="_blank">
-        <img alt="Download ZIP" src="https://img.shields.io/badge/DOWNLOAD_ZIP-For_Panel-AB82FF?style=for-the-badge&logo=github&logoColor=white&labelColor=0F0529"/>
+      <b>Lead Architect & Operative</b><br/>
+      <code>Shenura Nimnada</code><br/><br/>
+      <a href="https://wa.me/94788108090" target="_blank">
+        <img src="https://img.shields.io/badge/ENCRYPTED_COMMS-WHATSAPP-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
+      </a>
+      <a href="https://github.com" target="_blank">
+        <img src="https://img.shields.io/badge/DATABASE-GITHUB-181717?style=for-the-badge&logo=github&logoColor=white" />
+      </a>
+    </td>
+    <td align="center">
+      <b>Base Neural Architecture</b><br/>
+      <code>JawadTechX (KHAN-MD Core)</code><br/><br/>
+      <a href="https://github.com/JawadTechYT" target="_blank">
+        <img src="https://img.shields.io/badge/ORIGIN-CORE_AUTHOR-9D00FF?style=for-the-badge&logo=git&logoColor=white" />
       </a>
     </td>
   </tr>
 </table>
 
-<hr>
-<p align="center"><i>✨ Keep your bot updated regularly to enjoy the latest features and patches.</i></p>
+<br/>
 
----
+<!-- ═══════════════════ CYBER WAVING FOOTER ═══════════════════ -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,50:02140d,100:00ff66&height=120&section=footer" width="100%"/>
 
-## KHAN-MD FEATURES
-
-<div align="center">
-  <img src="https://img.shields.io/badge/dynamic/json?color=purple&label=Features&style=for-the-badge&url=https://api.example.com/khanmd&query=$.features_count&suffix=%20Active" alt="Features"/>
-</p>
-</div>
-
-<div align="center">
-
-|  ⚒️ **Feature**                     | **Status** 🔰  |
-|-----------------------------------|--------------|
-| <b>🤖 Ultimate Work </b>    | Active ✅   |
-| <b>🔁 Anti-Delete</b>              | Active ✅   |
-| <b>🎵 24/7 Runtime</b>               | Active ✅   |
-| <b>📥 Downloader</b>         | Active ✅   |
-| <b>🧠 AI Chat</b>                  | Active ✅   |
-| <b>👮 Group Setting</b>         | Active ✅   |
-| <b>📛 Auto Sticker</b>             | Active ✅   |
-| <b>🎮 Games</b>                    | Active ✅   |
-| <b>🌐 Web Pairing</b>              | Active ✅   |
-| <b>🎨 Sticker Maker</b>            | Active ✅   |
-
-</div>
-
-<h2 align="center" style="color:#25D366; font-family:monospace; font-size:26px;">
-🪀 OFFICIAL SUPPORT CHANNEL
-</h2>
-
-<div align="center" style="margin-top: 15px; margin-bottom: 15px; background:#0e0e0e; padding: 20px; border-radius: 12px; border: 2px solid #25D366; box-shadow: 0 0 15px #25D366; width: 95%;">
-
-<p style="color:#e0e0e0; font-size:14px; font-family:sans-serif;">
-📢 Get updates, fixes, and sneak peeks directly from the official channel.
-</p>
-
-<a href="https://whatsapp.com/channel/0029Vb8ux0L8kyyHPResdY1W" target="_blank">
-  <img src="https://img.shields.io/badge/JOIN_CHANNEL-NOW-8A2BE2?style=for-the-badge&logo=whatsapp&logoColor=white&labelColor=111111" alt="Join WhatsApp Channel"/>
-</a>
-
-</div>
-
----
-
-<h2 align="center" style="color:#9D00FF; font-family:monospace; font-size:26px;">
-🧾 PROJECT STATS KHAN-MD
-</h2>
-
-<div align="center" style="margin-top: 12px; margin-bottom: 20px; background:#0b0b0b; padding: 25px; border-radius: 12px; border: 2px solid #9D00FF; box-shadow: 0 0 20px #9D00FF; width: 95%;">
-
-<a href="https://github.com/JawadTechYT" target="_blank">
-  <img src="https://github-readme-stats-fast.vercel.app/api?username=JawadTechYT&show_icons=true&theme=tokyonight&border_color=9D00FF&title_color=00ffff&icon_color=00ffff&text_color=ffffff" width="420" alt="GitHub Stats"/>
-</a>
-
-</div>
-
----
-
-## Credits ⚒️
-
-<p><strong>Creator:</strong><br>
-JawadTechX (Official Creator)</p>
-
----
-
-<h2 align="center" style="color:#ff00ff; font-family:monospace; font-size:26px;">
-🧠 DEVELOPER NOTICE
-</h2>
-
-<div align="center" style="background:#0d0d0d; border:2px dashed #ff00ff; border-radius:12px; padding:20px; width:90%; box-shadow:0 0 15px #ff00ff;">
-
-<p style="color:#ffffff; font-size:15px; font-family:sans-serif;">
-🚫 This project is <strong>NOT FOR SALE</strong> and is provided for educational and personal use only.<br><br>
-📛 <strong>Do not use without giving proper credit</strong> to the original author.<br><br>
-🛑 Unauthorized selling, re-uploading, or branding as your own is strictly prohibited.
-</p>
-
-</div>
-
----
-
-## 📜 DISCLAIMER
-
-<div align="center" style="background-color:#0f0f0f; border:2px solid #00ffff; border-radius:10px; padding:20px; box-shadow:0 0 10px #00ffff;">
-
-<h3 style="color:#00ffff; font-family:monospace;">📌 Read Carefully</h3>
-
-<p style="color:#ffffff; font-size:14px;">
-This bot is <strong>not affiliated with WhatsApp Inc.</strong><br>
-Use at your own risk. We are <strong>not responsible</strong> for any misuse, abuse, or ban that results from improper use.<br>
-Inspired by the original work of <strong>Balleys</strong>, and enhanced by the community.
-</p>
-
-</div>
-
----
-
-## 📝 LICENSE
-
-<div align="center" style="background-color:#101010; border:2px solid #888888; border-radius:10px; padding:15px; box-shadow:0 0 5px #666666;">
-
-<p style="color:#ffffff; font-size:14px;">
-This project is licensed under the <strong>Apache License 2.0</strong><br>
-You are free to use, modify, and distribute it under the terms of this license.
-</p>
-
-<a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank">
-  <img src="https://img.shields.io/badge/License-Apache_2.0-ff69b4?style=for-the-badge&logo=apache" />
-</a>
-
-</div>
-
----
-
-<h3 align="center">🙏 Thanks for using!</h3>
 <p align="center">
-  If you like this project, consider giving it a ⭐ on GitHub.<br>
-  Made with ❤️ by <a href="https://github.com/JawadTechYT">JawadTechX</a>
+  <code>[ ACCESS RESTRICTED • CLASSIFIED MIL-SPEC BOT ENGINE • LEAVE A ⭐ IF YOU BREACHED ]</code>
 </p>
+
+</div>
