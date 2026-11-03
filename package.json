@@ -15,7 +15,7 @@
     "@ffmpeg-installer/ffmpeg": "^1.1.0",
     "@google/genai": "^2.31.0",
     "@vitalets/google-translate-api": "^9.2.1",
-    "@whiskeysockets/baileys": "github:WhiskeySockets/Baileys",
+    "@whiskeysockets/baileys": "git+https://github.com/WhiskeySockets/Baileys.git",
     "adm-zip": "^0.5.16",
     "axios": "^1.7.9",
     "body-parser": "^1.20.2",
