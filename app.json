@@ -1,15 +1,17 @@
 {
-  "name": "KHAN-MD",
+  "name": "Zypher MD",
   "description": "Javascript WhatsApp bot made by Jᴀᴡᴀᴅ TᴇᴄʜX",
-  "logo": "https://files.catbox.moe/6zd0ru.jpg",
-  "keywords": ["KHAN-MD"],
+  "logo": "https://files.catbox.moe/qvtnzu.png",
+  "keywords": [
+    "Zypher MD"
+  ],
   "success_url": "/",
-  "stack": "container",
+  "stack": "heroku-26",
   "env": {
     "SESSION_ID": {
       "description": "Put the session-id here. (Required)",
       "required": true,
-      "value": ""
+      "value": "JK~sypGEZwB#5hlPaJLntstfFlDqAZ_BeABZRoGzMxw61dXR9XeBwHE"
     },
     "PREFIX": {
       "description": "Bot prefix (Default: .)",
@@ -17,9 +19,9 @@
       "value": "."
     },
     "BOT_NAME": {
-      "description": "Your bot name (Default: KHAN-MD)",
+      "description": "Your bot name (Default: Zypher MD)",
       "required": false,
-      "value": "KHAN-MD"
+      "value": "Zypher MD"
     },
     "MODE": {
       "description": "Bot mode: public/private/inbox/groups (Default: private)",
@@ -29,12 +31,12 @@
     "OWNER_NUMBER": {
       "description": "Owner WhatsApp number without + (Default: 92342*******)",
       "required": false,
-      "value": "92342*******"
+      "value": "94788108090"
     },
     "OWNER_NAME": {
       "description": "Owner name (Default: Jᴀᴡᴀᴅ TᴇᴄʜX)",
       "required": false,
-      "value": "Jᴀᴡᴀᴅ TᴇᴄʜX"
+      "value": "Shenura Nimnada"
     },
     "HEROKU_API_KEY": {
       "description": "Heroku API key if deploying on heroku",
@@ -180,12 +182,21 @@
       "description": "Bot description",
       "required": false,
       "value": "*© Powered by Jᴀᴡᴀᴅ TᴇᴄʜX*"
+    },
+    "CHATBOT": {
+      "description": "AI Chatbot for normal messages: on/off/all/inbox (Default: on)",
+      "required": false,
+      "value": "on"
+    },
+    "GEMINI_API_KEY": {
+      "description": "Google Gemini API Key for smart chatbot",
+      "required": false,
+      "value": "AQ.Ab8RN6LcZfcpXqsy2kRjlPHe05mQ7-29TyW1yVWAxSLa25CQZQ"
     }
   },
   "buildpacks": [
     {
       "url": "https://github.com/heroku/heroku-buildpack-nodejs.git"
     }
-  ],
-  "stack": "heroku-26"
+  ]
 }

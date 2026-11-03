@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZYPHER MD — Two-Way Real-Time Voice Call Center</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Noto+Sans+Sinhala:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0a0e17;
+            --bg-card: rgba(18, 24, 38, 0.75);
+            --bg-card-hover: rgba(26, 34, 54, 0.85);
+            --accent-cyan: #00f2fe;
+            --accent-blue: #4facfe;
+            --accent-green: #00e676;
+            --accent-red: #ff3366;
+            --accent-purple: #9d4edd;
+            --text-main: #f0f4f8;
+            --text-muted: #8a99ad;
+            --border: rgba(255, 255, 255, 0.08);
+            --glow-cyan: 0 0 25px rgba(0, 242, 254, 0.35);
+            --glow-green: 0 0 25px rgba(0, 230, 118, 0.35);
+            --glow-red: 0 0 25px rgba(255, 51, 102, 0.35);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Outfit', 'Noto Sans Sinhala', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            background: radial-gradient(circle at 15% 15%, #152238 0%, #080c14 60%, #04060a 100%);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        header {
+            padding: 20px 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border);
+            backdrop-filter: blur(12px);
+            background: rgba(10, 14, 23, 0.7);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .brand-logo {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            box-shadow: var(--glow-cyan);
+            animation: pulse-glow 3s infinite alternate;
+        }
+
+        @keyframes pulse-glow {
+            0% { box-shadow: 0 0 15px rgba(0, 242, 254, 0.3); }
+            100% { box-shadow: 0 0 30px rgba(157, 78, 221, 0.5); }
+        }
+
+        .brand-text h1 {
+            font-size: 20px;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            background: linear-gradient(90deg, #ffffff, var(--accent-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .brand-text p {
+            font-size: 11px;
+            color: var(--text-muted);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .system-status {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(0, 230, 118, 0.1);
+            border: 1px solid rgba(0, 230, 118, 0.3);
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--accent-green);
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--accent-green);
+            box-shadow: 0 0 10px var(--accent-green);
+            animation: blink 1.5s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.4; transform: scale(0.85); }
+        }
+
+        main {
+            flex: 1;
+            padding: 28px 32px;
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 380px;
+            gap: 28px;
+        }
+
+        @media (max-width: 1024px) {
+            main { grid-template-columns: 1fr; }
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 24px;
+            backdrop-filter: blur(16px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        /* Call Status Hero */
+        .call-hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 20px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(0, 242, 254, 0.2);
+            background: linear-gradient(180deg, rgba(18, 24, 38, 0.8) 0%, rgba(10, 15, 26, 0.95) 100%);
+        }
+
+        .call-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0, 242, 254, 0.05) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .caller-avatar-wrapper {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .caller-avatar {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #1f2d47, #131b2c);
+            border: 3px solid var(--accent-cyan);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 46px;
+            box-shadow: var(--glow-cyan);
+            transition: all 0.3s ease;
+        }
+
+        .pulse-rings {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            border: 2px solid var(--accent-cyan);
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .is-calling .pulse-rings {
+            animation: ring-pulse 1.8s infinite cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        .is-active-call .caller-avatar {
+            border-color: var(--accent-green);
+            box-shadow: var(--glow-green);
+        }
+
+        @keyframes ring-pulse {
+            0% { transform: translate(-50%, -50%) scale(0.9); opacity: 0.8; }
+            100% { transform: translate(-50%, -50%) scale(1.6); opacity: 0; }
+        }
+
+        .caller-name {
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .caller-number {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        .call-state-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 18px;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            transition: all 0.3s ease;
+        }
+
+        .call-state-pill.idle { color: var(--text-muted); }
+        .call-state-pill.ringing { background: rgba(255, 51, 102, 0.15); border-color: var(--accent-red); color: var(--accent-red); }
+        .call-state-pill.connected { background: rgba(0, 230, 118, 0.15); border-color: var(--accent-green); color: var(--accent-green); }
+        .call-state-pill.ai-speaking { background: rgba(0, 242, 254, 0.15); border-color: var(--accent-cyan); color: var(--accent-cyan); }
+
+        /* Wave Visualizer */
+        .visualizer-container {
+            width: 100%;
+            height: 90px;
+            margin: 24px 0 16px 0;
+            position: relative;
+        }
+
+        canvas#audioWave {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        /* Hero Controls */
+        .call-actions {
+            display: flex;
+            gap: 16px;
+            margin-top: 10px;
+        }
+
+        .btn {
+            border: none;
+            outline: none;
+            padding: 12px 28px;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.25s ease;
+        }
+
+        .btn-call-start {
+            background: linear-gradient(135deg, #00e676, #00b0ff);
+            color: #05141f;
+            box-shadow: 0 4px 20px rgba(0, 230, 118, 0.4);
+        }
+
+        .btn-call-start:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 230, 118, 0.6);
+        }
+
+        .btn-call-end {
+            background: linear-gradient(135deg, #ff3366, #ff6b8b);
+            color: #fff;
+            box-shadow: 0 4px 20px rgba(255, 51, 102, 0.4);
+        }
+
+        .btn-call-end:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 51, 102, 0.6);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        /* Live Conversation Transcript */
+        .transcript-section {
+            margin-top: 24px;
+            display: flex;
+            flex-direction: column;
+            height: 380px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .transcript-feed {
+            flex: 1;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            padding-right: 6px;
+        }
+
+        .transcript-feed::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .transcript-feed::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+
+        .msg-bubble {
+            max-width: 80%;
+            padding: 12px 18px;
+            border-radius: 16px;
+            font-size: 14px;
+            line-height: 1.5;
+            position: relative;
+            animation: popIn 0.25s ease;
+        }
+
+        @keyframes popIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .msg-caller {
+            align-self: flex-start;
+            background: rgba(30, 42, 66, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-bottom-left-radius: 4px;
+        }
+
+        .msg-caller .speaker-tag {
+            color: var(--accent-cyan);
+            font-weight: 700;
+            font-size: 11px;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .msg-ai {
+            align-self: flex-end;
+            background: linear-gradient(135deg, rgba(0, 114, 255, 0.25), rgba(0, 242, 254, 0.2));
+            border: 1px solid rgba(0, 242, 254, 0.3);
+            border-bottom-right-radius: 4px;
+        }
+
+        .msg-ai .speaker-tag {
+            color: var(--accent-green);
+            font-weight: 700;
+            font-size: 11px;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        /* Sidebar Panels */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .setting-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .setting-row:last-child {
+            border-bottom: none;
+        }
+
+        .setting-info h4 {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 3px;
+        }
+
+        .setting-info p {
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+
+        /* Toggle switch */
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 46px;
+            height: 24px;
+        }
+
+        .switch input { opacity: 0; width: 0; height: 0; }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-color: rgba(255, 255, 255, 0.15);
+            transition: .3s;
+            border-radius: 30px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 18px;
+            width: 18px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            transition: .3s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: var(--accent-green);
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(22px);
+        }
+
+        select.custom-select {
+            background: rgba(18, 24, 38, 0.9);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 8px 14px;
+            border-radius: 10px;
+            outline: none;
+            font-size: 13px;
+            cursor: pointer;
+        }
+
+        /* Beloved card */
+        .beloved-box {
+            background: linear-gradient(135deg, rgba(255, 51, 102, 0.12), rgba(157, 78, 221, 0.12));
+            border: 1px solid rgba(255, 51, 102, 0.3);
+            border-radius: 16px;
+            padding: 16px;
+        }
+
+        .beloved-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #ff6b8b;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .beloved-desc {
+            font-size: 12px;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        footer {
+            padding: 16px;
+            text-align: center;
+            font-size: 12px;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border);
+            background: rgba(10, 14, 23, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="brand">
+            <div class="brand-logo">🎙️</div>
+            <div class="brand-text">
+                <h1>ZYPHER MD — LIVE CALL CENTER</h1>
+                <p>Two-Way Real-Time VoIP + Sinhala AI Voice</p>
+            </div>
+        </div>
+        <div class="system-status" id="connectionStatus">
+            <div class="status-dot"></div>
+            <span id="statusText">VOIP BRIDGE READY</span>
+        </div>
+    </header>
+
+    <main>
+        <!-- Main Column: Call Screen & Live Transcript -->
+        <section class="call-area">
+            <div class="card call-hero" id="callHeroCard">
+                <div class="caller-avatar-wrapper">
+                    <div class="pulse-rings"></div>
+                    <div class="caller-avatar" id="callerAvatar">👤</div>
+                </div>
+                <h2 class="caller-name" id="callerName">Ready for WhatsApp Call</h2>
+                <p class="caller-number" id="callerNumber">No active incoming call</p>
+                <div class="call-state-pill idle" id="callStatePill">
+                    <span>●</span> <span id="callStateLabel">STANDBY / WAITING</span>
+                </div>
+
+                <div class="visualizer-container">
+                    <canvas id="audioWave"></canvas>
+                </div>
+
+                <div class="call-actions">
+                    <button class="btn btn-call-start" id="btnStartTalk">
+                        <span>🎙️</span> <span id="btnStartTalkText">Start 2-Way Live Talk</span>
+                    </button>
+                    <button class="btn btn-call-end" id="btnEndCall" style="display: none;">
+                        <span>📵</span> End Call
+                    </button>
+                    <button class="btn btn-secondary" id="btnInterrupt" style="display: none;">
+                        <span>✋</span> Interrupt AI
+                    </button>
+                    <button class="btn btn-secondary" id="btnTestVoice">
+                        <span>🔊</span> Test Sinhala Voice
+                    </button>
+                </div>
+            </div>
+
+            <!-- Live Sinhala Transcript -->
+            <div class="card transcript-section">
+                <div class="section-header">
+                    <div class="section-title">
+                        <span>💬</span> Live Sinhala Conversation Transcript
+                    </div>
+                    <button class="btn btn-secondary" id="btnClearTranscript" style="padding: 6px 14px; font-size: 11px;">
+                        Clear
+                    </button>
+                </div>
+                <div class="transcript-feed" id="transcriptFeed">
+                    <div class="msg-bubble msg-ai">
+                        <div class="speaker-tag">Zypher MD AI Voice</div>
+                        හෙලෝ! මම Zypher MD Real-Time Sinhala AI Voice Call සහායකයා. ඔයාට මට WhatsApp Call එකක් අරන් සජීවීව සිංහලෙන් කතා කරන්න පුළුවන්!
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sidebar: Configuration & Controls -->
+        <aside class="sidebar">
+            <div class="card">
+                <h3 style="font-size: 16px; margin-bottom: 16px;">⚙️ Call Settings</h3>
+                
+                <div class="setting-row">
+                    <div class="setting-info">
+                        <h4>Auto Answer Calls</h4>
+                        <p>ස්වයංක්‍රීයව Call Answer කිරීම</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" id="toggleAutoAnswer" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div class="setting-row">
+                    <div class="setting-info">
+                        <h4>Live AI Voice Talk</h4>
+                        <p>AI සජීවීව හඬින් කතාබස් කිරීම</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" id="toggleAiTalk" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div class="setting-row">
+                    <div class="setting-info">
+                        <h4>Active Sinhala Voice</h4>
+                        <p>AI හඬෙහි ස්වභාවය</p>
+                    </div>
+                    <select class="custom-select" id="selectVoice">
+                        <option value="Aoede" selected>Aoede (Female Warm & Natural)</option>
+                        <option value="Kore">Kore (Female Soft & Gentle)</option>
+                        <option value="Puck">Puck (Male Friendly)</option>
+                        <option value="Charon">Charon (Male Deep & Calm)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="card beloved-box">
+                <div class="beloved-header">
+                    <span>💖</span> Special Loved Number Mode
+                </div>
+                <p class="beloved-desc">
+                    <strong>+94761329544</strong> අංකයෙන් Call එකක් පැමිණි විට ස්වයංක්‍රීයව ආදරණීය, සුරතල් (Romantic Pampering) හඬින් පිළිතුරු ලබා දේ.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3 style="font-size: 15px; margin-bottom: 12px;">📊 Call Statistics</h3>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                    <div style="background: rgba(255,255,255,0.03); padding: 12px; border-radius: 12px; text-align: center;">
+                        <div style="font-size: 22px; font-weight: 800; color: var(--accent-cyan);" id="statCallCount">0</div>
+                        <div style="font-size: 11px; color: var(--text-muted);">Calls Received</div>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.03); padding: 12px; border-radius: 12px; text-align: center;">
+                        <div style="font-size: 22px; font-weight: 800; color: var(--accent-green);" id="statAiReplies">0</div>
+                        <div style="font-size: 11px; color: var(--text-muted);">AI Spoken Replies</div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        Zypher MD &bull; Two-Way Real-Time VoIP AI Call Bridge &bull; Powered by Google Gemini 2.0 &amp; Baileys
+    </footer>
+
+    <script>
+        // WebRTC & Audio Context state
+        let audioCtx = null;
+        let micStream = null;
+        let micSource = null;
+        let analyser = null;
+        let scriptNode = null;
+        let ws = null;
+        let isTwoWayActive = false;
+        let isAiSpeaking = false;
+        let currentAudio = null;
+
+        // Statistics
+        let callCount = 0;
+        let aiRepliesCount = 0;
+
+        // DOM elements
+        const statusText = document.getElementById('statusText');
+        const callHeroCard = document.getElementById('callHeroCard');
+        const callerName = document.getElementById('callerName');
+        const callerNumber = document.getElementById('callerNumber');
+        const callStatePill = document.getElementById('callStatePill');
+        const callStateLabel = document.getElementById('callStateLabel');
+        const btnStartTalk = document.getElementById('btnStartTalk');
+        const btnStartTalkText = document.getElementById('btnStartTalkText');
+        const btnEndCall = document.getElementById('btnEndCall');
+        const btnInterrupt = document.getElementById('btnInterrupt');
+        const btnTestVoice = document.getElementById('btnTestVoice');
+        const transcriptFeed = document.getElementById('transcriptFeed');
+        const toggleAutoAnswer = document.getElementById('toggleAutoAnswer');
+        const toggleAiTalk = document.getElementById('toggleAiTalk');
+        const selectVoice = document.getElementById('selectVoice');
+        const statCallCount = document.getElementById('statCallCount');
+        const statAiReplies = document.getElementById('statAiReplies');
+        const canvas = document.getElementById('audioWave');
+        const canvasCtx = canvas.getContext('2d');
+
+        // Setup Canvas size
+        function resizeCanvas() {
+            canvas.width = canvas.parentElement.clientWidth;
+            canvas.height = canvas.parentElement.clientHeight;
+        }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        // Connect WebSocket
+        function connectWebSocket() {
+            const proto = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsUrl = `${proto}//${window.location.host}/ws-call`;
+            
+            ws = new WebSocket(wsUrl);
+
+            ws.onopen = () => {
+                console.log('[WS] Connected to VoIP Call Bridge');
+                statusText.innerText = 'VOIP BRIDGE ONLINE 🟢';
+            };
+
+            ws.onmessage = async (e) => {
+                try {
+                    const data = JSON.parse(e.data);
+                    handleServerMessage(data);
+                } catch (err) {
+                    console.error('[WS] Parse error:', err);
+                }
+            };
+
+            ws.onclose = () => {
+                console.warn('[WS] Connection closed, retrying in 3s...');
+                statusText.innerText = 'DISCONNECTED (RECONNECTING...) 🟡';
+                setTimeout(connectWebSocket, 3000);
+            };
+
+            ws.onerror = (err) => {
+                console.error('[WS] Error:', err);
+            };
+        }
+
+        // Handle Messages from Backend Server
+        function handleServerMessage(msg) {
+            console.log('[Server Event]:', msg.type);
+
+            switch (msg.type) {
+                case 'INCOMING_CALL':
+                    handleIncomingCallAlert(msg);
+                    break;
+                case 'CALL_CONNECTED':
+                    setCallState('connected', 'CALL IN PROGRESS (LISTENING)', '🟢');
+                    break;
+                case 'CALL_ENDED':
+                    resetCallState();
+                    break;
+                case 'AI_THINKING':
+                    setCallState('ai-speaking', 'AI COMPOSING REPLY...', '🧠');
+                    break;
+                case 'TRANSCRIPT':
+                    appendTranscript(msg.role, msg.text);
+                    break;
+                case 'AI_AUDIO_CHUNK':
+                    playAiAudio(msg.audioBase64, msg.mimeType || 'audio/mpeg');
+                    break;
+                case 'CALL_STATS':
+                    if (msg.callCount !== undefined) statCallCount.innerText = msg.callCount;
+                    if (msg.aiReplies !== undefined) statAiReplies.innerText = msg.aiReplies;
+                    break;
+            }
+        }
+
+        // Handle incoming WhatsApp call event
+        function handleIncomingCallAlert(msg) {
+            callCount++;
+            statCallCount.innerText = callCount;
+            callerName.innerText = msg.callerName || 'WhatsApp Caller';
+            callerNumber.innerText = msg.callerNumber || '+94 7X XXX XXXX';
+            setCallState('ringing', 'INCOMING WHATSAPP CALL 📞', '🔔');
+            callHeroCard.classList.add('is-calling');
+
+            if (toggleAutoAnswer.checked) {
+                setTimeout(() => {
+                    if (!isTwoWayActive) startTwoWayAudio();
+                }, 1200);
+            }
+        }
+
+        // Set UI Call State
+        function setCallState(cls, label, icon) {
+            callStatePill.className = `call-state-pill ${cls}`;
+            callStateLabel.innerHTML = `${icon} ${label}`;
+        }
+
+        // Reset Call State
+        function resetCallState() {
+            isTwoWayActive = false;
+            stopMicrophone();
+            callHeroCard.classList.remove('is-calling', 'is-active-call');
+            callerName.innerText = 'Ready for WhatsApp Call';
+            callerNumber.innerText = 'No active incoming call';
+            setCallState('idle', 'STANDBY / WAITING', '●');
+            btnStartTalk.style.display = 'inline-flex';
+            btnStartTalkText.innerText = 'Start 2-Way Live Talk';
+            btnEndCall.style.display = 'none';
+            btnInterrupt.style.display = 'none';
+        }
+
+        // Append message to live transcript
+        function appendTranscript(role, text) {
+            const bubble = document.createElement('div');
+            bubble.className = `msg-bubble msg-${role === 'caller' ? 'caller' : 'ai'}`;
+            
+            const tag = document.createElement('div');
+            tag.className = 'speaker-tag';
+            tag.innerText = role === 'caller' ? 'Caller' : 'Zypher MD AI Voice';
+            
+            const content = document.createElement('div');
+            content.innerText = text;
+            
+            bubble.appendChild(tag);
+            bubble.appendChild(content);
+            transcriptFeed.appendChild(bubble);
+            transcriptFeed.scrollTop = transcriptFeed.scrollHeight;
+
+            if (role === 'ai') {
+                aiRepliesCount++;
+                statAiReplies.innerText = aiRepliesCount;
+            }
+        }
+
+        // Start Two-Way Live Audio
+        async function startTwoWayAudio() {
+            try {
+                if (!audioCtx) {
+                    audioCtx = new (window.AudioContext || window.webkitAudioContext)({ sampleRate: 16000 });
+                }
+                if (audioCtx.state === 'suspended') {
+                    await audioCtx.resume();
+                }
+
+                micStream = await navigator.mediaDevices.getUserMedia({
+                    audio: {
+                        echoCancellation: true,
+                        noiseSuppression: true,
+                        autoGainControl: true,
+                        sampleRate: 16000
+                    }
+                });
+
+                micSource = audioCtx.createMediaStreamSource(micStream);
+                analyser = audioCtx.createAnalyser();
+                analyser.fftSize = 256;
+                micSource.connect(analyser);
+
+                // Setup raw PCM streaming node
+                const bufferSize = 2048;
+                scriptNode = audioCtx.createScriptProcessor(bufferSize, 1, 1);
+                
+                // Voice Activity Detection (VAD) variables
+                let speechChunks = [];
+                let silenceCount = 0;
+                let isSpeaking = false;
+                const SILENCE_THRESHOLD = 0.015;
+                const SILENCE_FRAMES_TRIGGER = 22; // ~1 sec silence triggers send
+
+                scriptNode.onaudioprocess = (audioProcessingEvent) => {
+                    if (isAiSpeaking) return; // Ignore user audio while AI is speaking unless interrupted
+
+                    const inputData = audioProcessingEvent.inputBuffer.getChannelData(0);
+                    
+                    // Calculate RMS energy
+                    let sum = 0;
+                    for (let i = 0; i < inputData.length; i++) {
+                        sum += inputData[i] * inputData[i];
+                    }
+                    const rms = Math.sqrt(sum / inputData.length);
+
+                    if (rms > SILENCE_THRESHOLD) {
+                        isSpeaking = true;
+                        silenceCount = 0;
+                        setCallState('connected', 'LISTENING TO YOU SPEAKING...', '🎙️');
+                        
+                        // Convert float to 16-bit PCM
+                        const pcm16 = new Int16Array(inputData.length);
+                        for (let i = 0; i < inputData.length; i++) {
+                            const s = Math.max(-1, Math.min(1, inputData[i]));
+                            pcm16[i] = s < 0 ? s * 0x8000 : s * 0x7FFF;
+                        }
+                        speechChunks.push(pcm16);
+                    } else if (isSpeaking) {
+                        silenceCount++;
+                        if (silenceCount > SILENCE_FRAMES_TRIGGER && speechChunks.length > 5) {
+                            // End of speech detected! Send speech buffer to AI
+                            isSpeaking = false;
+                            silenceCount = 0;
+                            sendSpeechToAI(speechChunks);
+                            speechChunks = [];
+                        }
+                    }
+                };
+
+                micSource.connect(scriptNode);
+                scriptNode.connect(audioCtx.destination);
+
+                isTwoWayActive = true;
+                callHeroCard.classList.add('is-active-call');
+                btnStartTalk.style.display = 'none';
+                btnEndCall.style.display = 'inline-flex';
+                btnInterrupt.style.display = 'inline-flex';
+                setCallState('connected', '2-WAY TALK ACTIVE (SPEAK NOW)', '🟢');
+
+                // Inform backend that call is answered
+                if (ws && ws.readyState === WebSocket.OPEN) {
+                    ws.send(JSON.stringify({ type: 'CALL_ANSWERED' }));
+                }
+
+                drawVisualizer();
+
+            } catch (err) {
+                console.error('[Audio] Error accessing microphone:', err);
+                alert('Microphone Access Error: Please allow microphone permission in your browser to enable Two-Way Voice Call!');
+            }
+        }
+
+        // Convert and send accumulated PCM audio to backend AI
+        function sendSpeechToAI(chunks) {
+            setCallState('ai-speaking', 'AI PROCESSING SINHALA SPEECH...', '🧠');
+
+            let totalLength = 0;
+            for (const c of chunks) totalLength += c.length;
+            const fullPcm = new Int16Array(totalLength);
+            let offset = 0;
+            for (const c of chunks) {
+                fullPcm.set(c, offset);
+                offset += c.length;
+            }
+
+            // Convert to base64
+            const bytes = new Uint8Array(fullPcm.buffer);
+            let binary = '';
+            const len = bytes.byteLength;
+            for (let i = 0; i < len; i++) {
+                binary += String.fromCharCode(bytes[i]);
+            }
+            const base64Audio = btoa(binary);
+
+            if (ws && ws.readyState === WebSocket.OPEN) {
+                ws.send(JSON.stringify({
+                    type: 'CALLER_SPEECH',
+                    audio: base64Audio,
+                    sampleRate: 16000,
+                    voice: selectVoice.value
+                }));
+            }
+        }
+
+        // Play AI Spoken Audio
+        function playAiAudio(audioBase64, mimeType) {
+            if (!audioBase64) return;
+            try {
+                if (currentAudio) {
+                    currentAudio.pause();
+                    currentAudio = null;
+                }
+
+                isAiSpeaking = true;
+                setCallState('ai-speaking', 'AI SPEAKING BACK TO CALLER 🔊', '🔊');
+
+                const audioBlob = b64toBlob(audioBase64, mimeType);
+                const audioUrl = URL.createObjectURL(audioBlob);
+                currentAudio = new Audio(audioUrl);
+
+                currentAudio.onended = () => {
+                    isAiSpeaking = false;
+                    setCallState('connected', '2-WAY TALK ACTIVE (YOUR TURN)', '🟢');
+                };
+
+                currentAudio.onerror = (e) => {
+                    console.error('[Audio] Playback error:', e);
+                    isAiSpeaking = false;
+                };
+
+                currentAudio.play();
+            } catch (err) {
+                console.error('[Audio] Play error:', err);
+                isAiSpeaking = false;
+            }
+        }
+
+        function b64toBlob(b64Data, contentType = '', sliceSize = 512) {
+            const byteCharacters = atob(b64Data);
+            const byteArrays = [];
+            for (let offset = 0; offset < byteCharacters.length; offset += sliceSize) {
+                const slice = byteCharacters.slice(offset, offset + sliceSize);
+                const byteNumbers = new Array(slice.length);
+                for (let i = 0; i < slice.length; i++) {
+                    byteNumbers[i] = slice.charCodeAt(i);
+                }
+                const byteArray = new Uint8Array(byteNumbers);
+                byteArrays.push(byteArray);
+            }
+            return new Blob(byteArrays, { type: contentType });
+        }
+
+        // Stop Microphone
+        function stopMicrophone() {
+            if (scriptNode) { scriptNode.disconnect(); scriptNode = null; }
+            if (micSource) { micSource.disconnect(); micSource = null; }
+            if (micStream) {
+                micStream.getTracks().forEach(track => track.stop());
+                micStream = null;
+            }
+        }
+
+        // Animated Audio Visualizer
+        function drawVisualizer() {
+            if (!isTwoWayActive) {
+                canvasCtx.clearRect(0, 0, canvas.width, canvas.height);
+                return;
+            }
+
+            requestAnimationFrame(drawVisualizer);
+
+            const bufferLength = analyser.frequencyBinCount;
+            const dataArray = new Uint8Array(bufferLength);
+            analyser.getByteFrequencyData(dataArray);
+
+            canvasCtx.fillStyle = 'rgba(10, 14, 23, 0.3)';
+            canvasCtx.fillRect(0, 0, canvas.width, canvas.height);
+
+            const barWidth = (canvas.width / bufferLength) * 2.5;
+            let barHeight;
+            let x = 0;
+
+            for (let i = 0; i < bufferLength; i++) {
+                barHeight = (dataArray[i] / 255) * canvas.height * 0.85;
+
+                const gradient = canvasCtx.createLinearGradient(0, canvas.height, 0, 0);
+                if (isAiSpeaking) {
+                    gradient.addColorStop(0, '#00f2fe');
+                    gradient.addColorStop(1, '#9d4edd');
+                } else {
+                    gradient.addColorStop(0, '#00e676');
+                    gradient.addColorStop(1, '#00b0ff');
+                }
+
+                canvasCtx.fillStyle = gradient;
+                canvasCtx.fillRect(x, canvas.height - barHeight, barWidth, barHeight);
+
+                x += barWidth + 2;
+            }
+        }
+
+        // Event Listeners
+        btnStartTalk.addEventListener('click', () => {
+            startTwoWayAudio();
+        });
+
+        btnEndCall.addEventListener('click', () => {
+            if (ws && ws.readyState === WebSocket.OPEN) {
+                ws.send(JSON.stringify({ type: 'CALL_HANGUP' }));
+            }
+            if (currentAudio) {
+                currentAudio.pause();
+                currentAudio = null;
+            }
+            resetCallState();
+        });
+
+        btnInterrupt.addEventListener('click', () => {
+            if (currentAudio) {
+                currentAudio.pause();
+                currentAudio = null;
+            }
+            isAiSpeaking = false;
+            setCallState('connected', 'AI INTERRUPTED (LISTENING)', '🟢');
+        });
+
+        btnTestVoice.addEventListener('click', async () => {
+            btnTestVoice.disabled = true;
+            btnTestVoice.innerText = 'Generating Voice...';
+            try {
+                const res = await fetch('/api/test-voice', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        text: 'හෙලෝ! මම Zypher MD AI සහායකයා. Two-Way Live Voice Call පද්ධතිය සාර්ථකව ක්‍රියාත්මකයි!',
+                        voice: selectVoice.value
+                    })
+                });
+                const data = await res.json();
+                if (data.audioBase64) {
+                    playAiAudio(data.audioBase64, data.mimeType || 'audio/mpeg');
+                }
+            } catch (e) {
+                console.error(e);
+            } finally {
+                btnTestVoice.disabled = false;
+                btnTestVoice.innerHTML = '<span>🔊</span> Test Sinhala Voice';
+            }
+        });
+
+        btnClearTranscript.addEventListener('click', () => {
+            transcriptFeed.innerHTML = '';
+        });
+
+        // Initialize on Load
+        connectWebSocket();
+    </script>
+</body>
+</html>
+

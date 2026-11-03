@@ -1,0 +1,183 @@
+[
+  {
+    "id": "3EB0E6669BBAFF8D98A70E",
+    "jid": "94788108090@s.whatsapp.net",
+    "message": {
+      "key": {
+        "remoteJid": "94788108090@s.whatsapp.net",
+        "fromMe": true,
+        "id": "3EB0E6669BBAFF8D98A70E"
+      },
+      "message": {
+        "imageMessage": {
+          "url": "https://mmg.whatsapp.net/o1/v/t24/f2/m233/AQOeDXtPrRzFhelDjYrPgN9DyJHbif--6Hgel-tuTIHAuQDj4yjjlXBP-RJI9uXJ527FJrwgojNwbwMBbkleXgNblYyE5fwaD1a3NM0F7g?ccb=9-4&oh=01_Q5Aa6AEcaETPfw6701RP1Ck8zKgm42Gxm7xDGhtdrs2NPpu00g&oe=6B10FA65&_nc_sid=e6ed6c&mms3=true",
+          "mimetype": "image/jpeg",
+          "caption": "╭─〔 *🤖 Zypher MD* 〕  \n├─▸ *Ultra Super Fast Powerfull ⚠️*  \n│     *World Best BOT Zypher MD* \n╰─➤ *Your Smart WhatsApp Bot is Ready To use 🍁!*  \n\n- *🖤 Thank You for Choosing Zypher MD!* \n\n╭──〔 🔗 *Information* 〕  \n├─ 🧩 *Prefix:* = .\n├─ ☁️ *Ultra Version:* ✅\n├─ 🔗 *Pair Site:*  \n│    https://khanmd-pairx.onrender.com\n├─ 🌟 *Github Repo:*  \n│    https://github.com/JawadTechYT/KHAN-MD\n╰─🚀 *Powered by Shenura Nimnada*",
+          "fileSha256": "Aq7xPfNrAppzAiZV0KO/7FnmVTbBLd+2JAh/kSpVxHI=",
+          "fileLength": "74630",
+          "height": 768,
+          "width": 1359,
+          "mediaKey": "ivmbnUQL8FDUhwkBWgb1JVpmF6rSC/QjQPcSP9zT8lM=",
+          "fileEncSha256": "0DgD5ehDi8ayTrFG2kq5gj05CD6ygZ8RHFGI34+A+YQ=",
+          "directPath": "/o1/v/t24/f2/m233/AQOeDXtPrRzFhelDjYrPgN9DyJHbif--6Hgel-tuTIHAuQDj4yjjlXBP-RJI9uXJ527FJrwgojNwbwMBbkleXgNblYyE5fwaD1a3NM0F7g?ccb=9-4&oh=01_Q5Aa6AEcaETPfw6701RP1Ck8zKgm42Gxm7xDGhtdrs2NPpu00g&oe=6B10FA65&_nc_sid=e6ed6c",
+          "mediaKeyTimestamp": "1793685223",
+          "jpegThumbnail": "/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAASACADASIAAhEBAxEB/8QAGQABAAMBAQAAAAAAAAAAAAAAAAIDBAUG/8QAKxAAAgEDAgQDCQAAAAAAAAAAAQIDAAQREiEUMUGxBWFxIiQyQlFygZGh/8QAGAEBAAMBAAAAAAAAAAAAAAAAAgABAwT/xAAbEQACAwADAAAAAAAAAAAAAAAAAQIRMRIhQf/aAAwDAQACEQMRAD8A8hdTRxxxRwqVlQESHAw30P8Acfipsgupo1so3b2MaerEDJPf9UnliRtC7lWySMd/Kr4HcycVavoIyCVGNOdu1Gzdx8RJLS8GwsJTjfZzRY75IuJEMqwgBtRO2Oed+da4pPGpo9dvLM6ZIDKu3n0rFNd3qxNaS3DlFGgo3y46b8qlJhjyT6OUvM+lWWZ96i+4UpSljKjqN9wSG2OPSoxfFmlKCw6Fp//Z",
+          "contextInfo": {
+            "expiration": 100
+          }
+        },
+        "messageContextInfo": {
+          "messageSecret": "J/QMwmdHu7gtcENQnRTiHyTWgFRzwpdcyrD9QqD6sHo="
+        }
+      },
+      "messageTimestamp": "1793685223",
+      "status": "PENDING"
+    },
+    "timestamp": 1793685223000
+  },
+  {
+    "id": "3EB034CBA12DCBF4B3487E",
+    "jid": "94788108090@s.whatsapp.net",
+    "message": {
+      "key": {
+        "remoteJid": "94788108090@s.whatsapp.net",
+        "fromMe": true,
+        "id": "3EB034CBA12DCBF4B3487E"
+      },
+      "message": {
+        "reactionMessage": {
+          "key": {
+            "remoteJid": "94788108090@s.whatsapp.net",
+            "fromMe": true,
+            "id": "3EB0E6669BBAFF8D98A70E"
+          },
+          "text": "🐙",
+          "senderTimestampMs": "1793685224202"
+        }
+      },
+      "messageTimestamp": "1793685224",
+      "status": "PENDING"
+    },
+    "timestamp": 1793685224000
+  },
+  {
+    "id": "3EB05266AC55E2A3337C26",
+    "jid": "94788108090@s.whatsapp.net",
+    "message": {
+      "key": {
+        "remoteJid": "94788108090@s.whatsapp.net",
+        "fromMe": true,
+        "id": "3EB05266AC55E2A3337C26"
+      },
+      "message": {
+        "documentMessage": {
+          "url": "https://mmg.whatsapp.net/v/t62.7119-24/883197428_3302507336805960_2048734540050953650_n.enc?ccb=11-4&oh=01_Q5Aa6AFLx2N0Fsk-A19DAkFK_e86U4EZsiAdbzDH5QlObo2eKA&oe=6B10E4AB&_nc_sid=5e03e0&mms3=true",
+          "mimetype": "application/zip",
+          "fileSha256": "dd6asBgC83SWpcOv4Wx1Ub7Xp15bqoErmgqHJE+RZ8w=",
+          "fileLength": "14561",
+          "mediaKey": "Juqzkrc0HFXuLM3x8q8frWtVObYqf7SsSfOO+glRWac=",
+          "fileName": "KHAN-MD.zip",
+          "fileEncSha256": "voCgKy1Kx4JYtWOhMjnNx6exAqS4CSDAhad0fGU6XJw=",
+          "directPath": "/v/t62.7119-24/883197428_3302507336805960_2048734540050953650_n.enc?ccb=11-4&oh=01_Q5Aa6AFLx2N0Fsk-A19DAkFK_e86U4EZsiAdbzDH5QlObo2eKA&oe=6B10E4AB&_nc_sid=5e03e0",
+          "mediaKeyTimestamp": "1793685226",
+          "contextInfo": {
+            "stanzaId": "3EB0E6669BBAFF8D98A70E",
+            "participant": "94788108090@s.whatsapp.net",
+            "quotedMessage": {
+              "imageMessage": {
+                "url": "https://mmg.whatsapp.net/o1/v/t24/f2/m233/AQOeDXtPrRzFhelDjYrPgN9DyJHbif--6Hgel-tuTIHAuQDj4yjjlXBP-RJI9uXJ527FJrwgojNwbwMBbkleXgNblYyE5fwaD1a3NM0F7g?ccb=9-4&oh=01_Q5Aa6AEcaETPfw6701RP1Ck8zKgm42Gxm7xDGhtdrs2NPpu00g&oe=6B10FA65&_nc_sid=e6ed6c&mms3=true",
+                "mimetype": "image/jpeg",
+                "caption": "╭─〔 *🤖 Zypher MD* 〕  \n├─▸ *Ultra Super Fast Powerfull ⚠️*  \n│     *World Best BOT Zypher MD* \n╰─➤ *Your Smart WhatsApp Bot is Ready To use 🍁!*  \n\n- *🖤 Thank You for Choosing Zypher MD!* \n\n╭──〔 🔗 *Information* 〕  \n├─ 🧩 *Prefix:* = .\n├─ ☁️ *Ultra Version:* ✅\n├─ 🔗 *Pair Site:*  \n│    https://khanmd-pairx.onrender.com\n├─ 🌟 *Github Repo:*  \n│    https://github.com/JawadTechYT/KHAN-MD\n╰─🚀 *Powered by Shenura Nimnada*",
+                "fileSha256": "Aq7xPfNrAppzAiZV0KO/7FnmVTbBLd+2JAh/kSpVxHI=",
+                "fileLength": "74630",
+                "height": 768,
+                "width": 1359,
+                "mediaKey": "ivmbnUQL8FDUhwkBWgb1JVpmF6rSC/QjQPcSP9zT8lM=",
+                "fileEncSha256": "0DgD5ehDi8ayTrFG2kq5gj05CD6ygZ8RHFGI34+A+YQ=",
+                "directPath": "/o1/v/t24/f2/m233/AQOeDXtPrRzFhelDjYrPgN9DyJHbif--6Hgel-tuTIHAuQDj4yjjlXBP-RJI9uXJ527FJrwgojNwbwMBbkleXgNblYyE5fwaD1a3NM0F7g?ccb=9-4&oh=01_Q5Aa6AEcaETPfw6701RP1Ck8zKgm42Gxm7xDGhtdrs2NPpu00g&oe=6B10FA65&_nc_sid=e6ed6c",
+                "mediaKeyTimestamp": "1793685223",
+                "jpegThumbnail": "/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAASACADASIAAhEBAxEB/8QAGQABAAMBAQAAAAAAAAAAAAAAAAIDBAUG/8QAKxAAAgEDAgQDCQAAAAAAAAAAAQIDAAQREiEUMUGxBWFxIiQyQlFygZGh/8QAGAEBAAMBAAAAAAAAAAAAAAAAAgABAwT/xAAbEQACAwADAAAAAAAAAAAAAAAAAQIRMRIhQf/aAAwDAQACEQMRAD8A8hdTRxxxRwqVlQESHAw30P8Acfipsgupo1so3b2MaerEDJPf9UnliRtC7lWySMd/Kr4HcycVavoIyCVGNOdu1Gzdx8RJLS8GwsJTjfZzRY75IuJEMqwgBtRO2Oed+da4pPGpo9dvLM6ZIDKu3n0rFNd3qxNaS3DlFGgo3y46b8qlJhjyT6OUvM+lWWZ96i+4UpSljKjqN9wSG2OPSoxfFmlKCw6Fp//Z"
+              }
+            }
+          }
+        },
+        "messageContextInfo": {
+          "messageSecret": "F/X0QB8Jpbnt3sEtnqgi7tMSU3qVRqTl1EzZ1QFY5JI="
+        }
+      },
+      "messageTimestamp": "1793685226",
+      "status": "PENDING"
+    },
+    "timestamp": 1793685226000
+  },
+  {
+    "id": "3EB070F5A076C00FB4E824",
+    "jid": "94788108090@s.whatsapp.net",
+    "message": {
+      "key": {
+        "remoteJid": "94788108090@s.whatsapp.net",
+        "fromMe": true,
+        "id": "3EB070F5A076C00FB4E824"
+      },
+      "message": {
+        "extendedTextMessage": {
+          "text": "❌ *නොගැලපෙන ගොනු ආකෘතියක් (Unsupported Format)*\n\n> කරුණාකර *PDF (.pdf)*, *Word (.docx)*, *Text (.txt)*, හෝ *Notes* ගොනුවක් එවන්න.",
+          "contextInfo": {
+            "stanzaId": "3EB05266AC55E2A3337C26",
+            "participant": "94788108090@s.whatsapp.net",
+            "quotedMessage": {
+              "documentMessage": {
+                "url": "https://mmg.whatsapp.net/v/t62.7119-24/883197428_3302507336805960_2048734540050953650_n.enc?ccb=11-4&oh=01_Q5Aa6AFLx2N0Fsk-A19DAkFK_e86U4EZsiAdbzDH5QlObo2eKA&oe=6B10E4AB&_nc_sid=5e03e0&mms3=true",
+                "mimetype": "application/zip",
+                "fileSha256": "dd6asBgC83SWpcOv4Wx1Ub7Xp15bqoErmgqHJE+RZ8w=",
+                "fileLength": "14561",
+                "mediaKey": "Juqzkrc0HFXuLM3x8q8frWtVObYqf7SsSfOO+glRWac=",
+                "fileName": "KHAN-MD.zip",
+                "fileEncSha256": "voCgKy1Kx4JYtWOhMjnNx6exAqS4CSDAhad0fGU6XJw=",
+                "directPath": "/v/t62.7119-24/883197428_3302507336805960_2048734540050953650_n.enc?ccb=11-4&oh=01_Q5Aa6AFLx2N0Fsk-A19DAkFK_e86U4EZsiAdbzDH5QlObo2eKA&oe=6B10E4AB&_nc_sid=5e03e0",
+                "mediaKeyTimestamp": "1793685226"
+              }
+            }
+          }
+        },
+        "messageContextInfo": {
+          "messageSecret": "KvfBjX8Uju3TbTeQv28QiWW6fi1KVr6kxnUZZ1TniCA="
+        }
+      },
+      "messageTimestamp": "1793685226",
+      "status": "PENDING"
+    },
+    "timestamp": 1793685226000
+  },
+  {
+    "id": "3EB0742D50E9350DF4956D",
+    "jid": "94788108090@s.whatsapp.net",
+    "message": {
+      "key": {
+        "remoteJid": "94788108090@s.whatsapp.net",
+        "fromMe": true,
+        "id": "3EB0742D50E9350DF4956D"
+      },
+      "message": {
+        "extendedTextMessage": {
+          "text": "Ahoy! 🤖 පෙනෙන විදිහට ඔයා එවපු file එක නම් මට support කරන්නේ නැහැ වගේ. \n\nකරුණාකරලා *PDF (.pdf)*, *Word (.docx)*, *Text (.txt)*, හෝ *Notes* ගොනුවක් හරියටම එවන්නකෝ, මම ඉක්මනටම වැඩේ ගොඩදාලා දෙන්නම්! 😉✨",
+          "contextInfo": {
+            "stanzaId": "3EB070F5A076C00FB4E824",
+            "participant": "94788108090@s.whatsapp.net",
+            "quotedMessage": {
+              "extendedTextMessage": {
+                "text": "❌ *නොගැලපෙන ගොනු ආකෘතියක් (Unsupported Format)*\n\n> කරුණාකර *PDF (.pdf)*, *Word (.docx)*, *Text (.txt)*, හෝ *Notes* ගොනුවක් එවන්න."
+              }
+            }
+          }
+        },
+        "messageContextInfo": {
+          "messageSecret": "A9lIUH1JCylQEUWpCO3Z4g4svOpb2Dn//mMjRGJ5rh8="
+        }
+      },
+      "messageTimestamp": "1793685235",
+      "status": "PENDING"
+    },
+    "timestamp": 1793685235000
+  }
+]
